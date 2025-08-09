@@ -8,8 +8,8 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "$";
   const delivery_fee = 10;
-  const backendUrl =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:2500";
+  const backendUrl = "https://ecommerce-fullstack-zprq.onrender.com"
+   
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
