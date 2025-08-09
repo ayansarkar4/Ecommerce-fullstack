@@ -219,7 +219,7 @@ const PlaceOrder = () => {
           <div className="flex gap-3 flex-col lg:flex-row">
             <div
               onClick={() => {
-                toast.warning("Razorpay is disabled in demo, use COD");
+                toast.warning("Stripe is disabled in demo, use COD");
                 setMethod("stripe");
               }}
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
