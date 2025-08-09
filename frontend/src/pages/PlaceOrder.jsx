@@ -218,7 +218,10 @@ const PlaceOrder = () => {
           {/* payment methods */}
           <div className="flex gap-3 flex-col lg:flex-row">
             <div
-              onClick={() => setMethod("stripe")}
+              onClick={() => {
+                toast.warning("Razorpay is disabled in demo, use COD");
+                setMethod("stripe");
+              }}
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
             >
               <p
@@ -230,9 +233,7 @@ const PlaceOrder = () => {
             </div>
             <div
               onClick={() => {
-                toast.warning(
-                  "Razorpay is disabled in demo, use COD or Stripe"
-                );
+                toast.warning("Razorpay is disabled in demo, use COD");
                 setMethod("razorpay");
               }}
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
